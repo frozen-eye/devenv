@@ -29,7 +29,9 @@ RUN apt-get update \
   && apt-get install -y -qq \
   build-essential \
   cmake \
-  gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
+  gcc-aarch64-linux-gnu g++-aarch64-linux-gnu \
+  libdpdk-dev \
+  libnuma-dev
 
 #RUN apt-get update \
 #  && apt-get install -y -qq \
