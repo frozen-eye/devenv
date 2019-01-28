@@ -31,7 +31,8 @@ RUN apt-get update \
   cmake \
   gcc-aarch64-linux-gnu g++-aarch64-linux-gnu \
   libdpdk-dev \
-  libnuma-dev
+  libnuma-dev \
+  redis-server
 
 #RUN apt-get update \
 #  && apt-get install -y -qq \
