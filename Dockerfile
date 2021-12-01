@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 LABEL VERSION="1.0"
 LABEL AUTHOR "Frozen Eye <frozen.eye.min@gmail.com>"
@@ -23,11 +23,13 @@ RUN apt-get update \
   build-essential \
   cmake \
   gcc-aarch64-linux-gnu g++-aarch64-linux-gnu \
+  libboost-dev \
   libdpdk-dev \
   libnuma-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# add user mapping
 RUN useradd -u 1000 -m -d /home/dev dev && usermod -aG sudo dev
 
 # sudoers
